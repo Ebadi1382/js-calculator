@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.calculator-main {
+  display: grid;
+  grid-template-areas:
+    "showresult showresult showresult showresult"
+    "showhelp showhelp showhelp showhelp"
+    "c c ac hasel"
+    "seven eight nine zarb"
+    "four five six manfi"
+    "one two three plus"
+    "threezero zeroo doublezero result";
+  gap: 10px;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  border: 5px solid #000;
+  border-radius: 10px;
+  user-select: none;
+}
+.showresult {
+  grid-area: showresult;
+  padding: 2rem 0;
+  background-color: #dad6d6;
+  border: 3.9px solid #000;
+  border-radius: 15px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  text-align: left;
+  padding-left: 1rem;
+}
+.showhelp {
+  grid-area: showhelp;
+  color: #000;
+}
+.c {
+  grid-area: c;
+  padding: 1.6rem;
+  background-color: #007bff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.c:hover {
+  background-color: #0400ff;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.c:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.ac {
+  grid-area: ac;
+  padding: 1.6rem;
+  background-color: #dc0000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.ac:hover {
+  background-color: #ab0101;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.ac:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.hasel {
+  grid-area: hasel;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.hasel:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.hasel:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.seven {
+  grid-area: seven;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.seven:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.seven:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.eight {
+  grid-area: eight;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.eight:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.eight:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.nine {
+  grid-area: nine;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.nine:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.nine:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.zarb {
+  grid-area: zarb;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.zarb:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.zarb:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.four {
+  grid-area: four;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.four:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.four:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.five {
+  grid-area: five;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.five:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.five:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.six {
+  grid-area: six;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.six:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.six:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.manfi {
+  grid-area: manfi;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.manfi:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.manfi:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.one {
+  grid-area: one;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.one:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.one:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.two {
+  grid-area: two;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.two:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.two:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.three {
+  grid-area: three;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.three:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.three:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.plus {
+  grid-area: plus;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.plus:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.plus:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.manfiplus {
+  grid-area: threezero;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.manfiplus:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.manfiplus:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.zeroo {
+  grid-area: zeroo;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.zeroo:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.zeroo:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.dot {
+  grid-area: doublezero;
+  padding: 1.6rem;
+  background-color: #787878;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.dot:hover {
+  background-color: #565656;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.dot:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
+.result {
+  grid-area: result;
+  padding: 1.6rem;
+  background-color: #02e333;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px
+    rgba(0, 0, 0, 1);
+}
+.result:hover {
+  background-color: #1dc000;
+  transition: all 0.2s ease-in-out;
+  scale: 0.9;
+  box-shadow: 0 0 0;
+}
+.result:active {
+  box-shadow: 4px 4px 4px
+    rgba(0, 0, 0, 0.5) inset;
+  font-size: 0.8rem;
+}
